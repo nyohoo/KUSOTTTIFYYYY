@@ -4,6 +4,7 @@
       <title>Kusotify</title>
       <%= csrf_meta_tags %>
       <%= csp_meta_tag %>
+      <meta name="viewport" content="width=device-width, initial-scale=1" >
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
@@ -12,3 +13,12 @@
       <%= yield %>
     </body>
 </html>
+
+<script>
+const moons = ['🌑', '🌒', '🌓', '🌔', '🌕', '🌖', '🌗', '🌘'];
+let count = 0;
+setInterval(()=> {
+	location.hash = moons[count % moons.length];
+	count++;
+}, 200);
+</script>
