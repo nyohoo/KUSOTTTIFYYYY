@@ -1,0 +1,37 @@
+<%= render 'shared/header' %>
+<div class="top-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="playlist-name col-md-10">
+        <% result.each do |track| %>
+          <p class="mt-lg-3">プレイリスト名： <%= track.name %></p>
+          <div class="embed-responsive embed-responsive-4by3"> 
+            <iframe  style="border-radius: 2% 2% / 2% 2%;" src="https://open.spotify.com/embed/playlist/<%= track.id %>?utm_source=generator" width="100%" height="300" frameBorder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <br>
+        <% end %>
+      </div>
+    </div>
+  
+
+  <br>
+  <br>
+  <br>
+
+    <div class="track-name">
+      <p class="mt-lg-3">🇳🇵ネパールで人気の！パーティー！ソング！🇳🇵</p>
+      <p>👨‍🔬＜ｷｸﾄ ﾀﾌﾞﾝ ﾒｯﾁｬ ｹﾞﾝｷ ﾅﾙﾖ</p>
+        <div class="row justify-content-center">
+          <% popular_tracks.each do |track| %>
+
+            <br>
+            <div class="col-4 m-4 embed-responsive embed-responsive-1by1"> 
+              <iframe  style="border-radius: 2% 2% / 2% 2%;" src="https://open.spotify.com/embed/track/<%= track.id %>?utm_source=generator" width="90%" height="" frameBorder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+            <br>
+          <% end %>
+        </div>
+    </div>
+
+  </div>
+</div>

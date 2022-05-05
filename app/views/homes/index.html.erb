@@ -1,33 +1,32 @@
-<div class="topPage">
-  <nav class="nav">
-    <ul>
-      <li class="personIcon"><%= link_to(content_tag(:i, "", class: 'fas fa-2x fa-user'), homes_index_path) %></li>
-      <h1>KusoDJ</h1>
-      <li class="messageIcon"><%= link_to(content_tag(:i, "", class: 'fas fa-2x fa-comments'), homes_index_path) %></li>
-    </ul>
-  </nav>
-
-  <div id="tinderslide">
-    <ul>
-      <% @diagnoses.each do |diagnose| %>
-        <li data-diagnoses="<%= diagnose.text %>">
-          <div class="diagnoseText"><%= diagnose.text %></div>
-          <%= image_tag diagnose.Image %>
-          <div class="like"></div>
-          <div class="dislike"></div>
-        </li>
-      <% end %>
-    </ul>
-    <form_with>
-    <input hidden class="count-1">
-    <%= submit "結果をみる！！！！！", homes_index_path, class: "noUser"  %>
-  </div>
+<div class="discription">
+  <h1>さあ、診断を始めましょう！</h1>
 </div>
+
+<div id="tinderslide">
+  <ul>
+    <% @diagnoses.each do |diagnose| %>
+      <li data-diagnoses="<%= diagnose.text %>">
+        <div class="diagnoseText"><%= diagnose.text %></div>
+        <%= image_tag diagnose.Image %>
+        <div class="like"></div>
+        <div class="dislike"></div>
+        <h1 class="card text-center">👈 　NO　🤔 YES 👉</h1>
+      </li>
+    <% end %>
+  </ul>
+  <%= form_with url: results_show_path, method: :get, local: true do |f| %>
+  <%= f.number_field :count, id: "count", value: 0, min: 0, max: 5 %>
+  <%= f.submit("", class: "noUser", id: "submit") %>
+  <% end %>
+</div>
+
 
 <script>
   // スワイプするユーザー数の定数を定義
   var usersNum = 5
   var currentUserIndex = 0;
+  var countUp = 0;
+  var countLike = 0;
   var postReaction = function (diagnoses_id, reaction) {
     $.ajaxSetup({
         headers: {
@@ -45,24 +44,45 @@
     },
     onLike: function (item) {
       currentUserIndex++;
-      #インプットのバリューを変える処理
-      checkUserNum();
       var diagnoses_id = item[0].dataset.diagnoses_id
-
+      postReaction(diagnoses_id, 'like')
+      // addLike++;
+      // console.log(countLike);
+      // console.log($("#count").val('') = Number(countLike));
+      
+      // $('#count').val(Number(countLike));
+      // $("#count").val('') = Number(countLike);
+      // console.log(countLike);
+      // console.log($("#count").val('') = Number(countLike));
+      ++countLike;
+      $("#count").val(String(countLike));
+      checkUserNum();
+      // var valText = $('#count').defaultValue;
+      // var val = Number(countLike) || 0;  // NaNのとき0にする
+      
     },
     animationRevertSpeed: 200,
     animationSpeed: 400,
     threshold: 1,
     likeSelector: '.like',
     dislikeSelector: '.dislike'
-  });  
+  });
+  
 
   function checkUserNum() {
     // スワイプするユーザー数とスワイプした回数が同じになればaddClassする
     if (currentUserIndex === usersNum){
       $(".noUser").addClass("is-active");
-      $("#actionBtnArea").addClass("is-none")
+      // $("#count").value = addLike;
+      $("#submit").click();
       return;
     }
-  }
+  };
+
+  const moons = ['🕐😊...........💣', '🕑😜..........💣', '🕒😁.........💣', '🕓🥱........💣', '🕔🥴.......💣', '🕕🤔......💣', '🕖😟.....💣', '🕗😨....💣', '🕘😭...💣', '🕙🤮..💣', '🕚🥺.💣', '💥💥💥💥', '💥💥💥💥💥💥💥💥', '💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥', '💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥', '💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥', '😇GAME_OVER😇', '😇GAME_OVER😇', '😇GAME_OVER😇', '😇GAME_OVER😇', '😇GAME_OVER😇', '🍺そんなに悩まんでもええんやで🍺', '🍺そんなに悩まんでもええんやで🍺', '🍺そんなに悩まんでもええんやで🍺', '🍺そんなに悩まんでもええんやで🍺', '🍺そんなに悩まんでもええんやで🍺', '🍺🍺そんなに悩まんでもええんやで🍺🍺', '🍺🍺そんなに悩まんでもええんやで🍺🍺', '🍺🍺そんなに悩まんでもええんやで🍺🍺', '🍺🍺🍺そんなに悩まんでもええんやで🍺🍺🍺', '🍺🍺🍺そんなに悩まんでもええんやで🍺🍺🍺', '🍺🍺🍺そんなに悩まんでもええんやで🍺🍺🍺', '🍺🍺🍺そんなに悩まんでもええんやで🍺🍺🍺', '🍺🍺🍺🍺そんなに悩まんでもええんやで🍺🍺🍺🍺', '🍺🍺🍺🍺そんなに悩まんでもええんやで🍺🍺🍺🍺', '🍺🍺🍺🍺そんなに悩まんでもええんやで🍺🍺🍺🍺','＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／', '＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／', '＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／', '＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／', '＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／', '＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／', '＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／', '＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／', '＼＼＼＼＼＼そんなに悩まんでもええんやで／／／／／／'];
+  let count = 0;
+  setInterval(()=> {
+  	location.hash = moons[count % moons.length];
+  	count++;
+  }, 1200);
 </script>

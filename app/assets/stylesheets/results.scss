@@ -1,0 +1,22 @@
+@import "bootstrap";
+@import "font-awesome";
+@import "jTinder";
+
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.playlist-name {
+  align-items: center;
+  width: 100vw;
+  max-width: 610px;
+  margin: 0 auto;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  color: #e07474;
+}
+
+.track-name {
+  font-family: 'Sawarabi Mincho', serif;
+  text-align: center;
+  font-size: 30px;
+}
