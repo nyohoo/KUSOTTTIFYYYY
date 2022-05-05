@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_01_165422) do
+ActiveRecord::Schema.define(version: 2022_04_30_175030) do
 
-  create_table "Diagnoses", force: :cascade do |t|
+  create_table "diagnoses", force: :cascade do |t|
     t.text "text"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "Image"
   end
 
 end
