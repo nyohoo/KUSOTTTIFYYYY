@@ -29,6 +29,9 @@
 /public/assets
 .byebug_history
 
+/memo_error
+/memo
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 gibo 2.2.7 by Simon Whitaker
