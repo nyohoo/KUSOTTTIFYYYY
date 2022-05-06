@@ -57,12 +57,12 @@ class ResultsController < ApplicationController
   end
 
   def search_popular_songs(search, country)
-    popular_tracks = RSpotify::Track.search(search,  market: country).first(200) 
+    popular_tracks = RSpotify::Track.search(search,  market: country).first(100) 
     popular_tracks.shuffle!
   end
 
   def america_popular_songs(search, country)
-    tracks = RSpotify::Track.search(search,  market: country).first(200) 
+    tracks = RSpotify::Track.search(search,  market: country).first(50) 
     popular_tracks = tracks.select do |track|
     track.album.popularity > 70
     end

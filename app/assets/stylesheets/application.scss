@@ -4,3 +4,49 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  padding-top: 20px;
+}
+
+header {
+  z-index: 100;
+}
+
+.img-fluid {
+  max-width: 100%; 
+  height: auto;
+}
+
+.top-pages {
+  width: 100vw;
+  max-width: 610px;
+  margin: 0 auto;
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 18px;
+  color: #c73cb0;
+}
+
+.message {
+  width: 100vw;
+  max-width: 610px;
+  margin: 0 auto;
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 25px;
+  color: #c73cb0;
+}
+
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #5332a7;
+  opacity: 0.4;
+  z-index: -1;
+}
+.Circles {
+  background-image: radial-gradient(circle at center center, #1643ca, #1b1366), repeating-radial-gradient(circle at center center, #ffa807, #ffc107, 20px, transparent 40px, transparent 20px);
+  background-blend-mode: multiply;
+}

@@ -1,0 +1,24 @@
+<main>
+  <div class="top-pages p-2">
+    <h1 class='top-message pb-6 mx-auto text-xl-center'>はじめまして<br>Mr.メンタルDJ博士です</h1>
+  </div>
+
+  <div class='top_man p-2 mg-thumbnail'>
+    <%= image_tag 'abstract-doctor.png', class: 'img-fluid rounded mx-auto d-block'%>
+  </div>
+
+  <div class="pb-6">
+    <h1 class='message'>あなたのツラいお気持ち、<br>音楽の力で癒してみませんか？</h1>
+  </div>
+
+  <div class="columns m-6">
+    <%= link_to homes_index_path, method: :get, class: 'column is-6 is-offset-3 custom-btn btn-1 submit-button button top-btn' do %>
+      <span><%= "診断を始める" %></span>
+    <% end %>
+  </div>
+</main>
+
+
+
+
+
