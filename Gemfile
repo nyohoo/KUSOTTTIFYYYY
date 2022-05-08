@@ -86,3 +86,6 @@ gem "activerecord-import"
 
 # Spotify
 gem 'rspotify'
+
+# SEO
+gem 'meta-tags'

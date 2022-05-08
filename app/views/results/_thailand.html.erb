@@ -8,6 +8,9 @@
     <br>
     <p class="h2 stroke description text-center font-weight-bold">５問中、２問にYESと答えたあなた！<br>少し落ち込み気味な精神状態かも？<br></p><br>
     <p class="h3 stroke-2 description text-center font-weight-bold">微笑みの国タイの有名なことわざと、明るく優しい音楽をどうぞ！</p>
+    <div class="row tweet justify-content-center">
+      <button onclick="tweet()" class="btn btn-info btn-lg">Tweetする</button>
+    </div>
     <div class="blank-2"></div>
     <p class="h6 present text-center">- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - </p>
     <p class="h2 stroke-3 present text-center">"ลำบากวันนี้ สบายวันหน้า"</p>
@@ -54,3 +57,29 @@
 </div>
 
 </div>
+
+<% set_meta_tags title: "タイ王国" %>
+
+<script>
+function tweet() {
+  const dataText = '\nツラい気持ち診断をしたところ、微笑みの国タイ王国の音楽を処方されました！'
+  const dataUrl = 'https://mental-dj.herokuapp.com/'
+  const dataVia = 'jiffu_fu'
+  const dataHashtags = 'メンタルDJ' + '&hashtags=個人開発' + '&hashtags=クソアプリ'
+
+  window.open(
+    'https://twitter.com/intent/tweet?&text=' +
+      dataText +
+      '%0a&' +
+      '%0a&' +
+      '&url=' +
+      dataUrl +
+      '%0a&' +
+      '&via=' +
+      dataVia +
+      '&hashtags=' +
+      dataHashtags
+  )
+}
+
+</script>

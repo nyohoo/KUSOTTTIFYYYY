@@ -8,6 +8,9 @@
     <br>
     <p class="h2 stroke description text-center font-weight-bold">５問全てにYESと答えたあなた！<br>とても良好な精神状態です！<br></p><br>
     <p class="h3 stroke-2 description text-center font-weight-bold">ブラジルの有名なことわざと、アゲアゲでスパイシィな音楽をどうぞ！</p>
+    <div class="row tweet justify-content-center">
+      <button onclick="tweet()" class="btn btn-info btn-lg">Tweetする</button>
+    </div>
     <div class="blank-2"></div>
     <p class="h6 present text-center">- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - </p>
     <p class="h2 stroke-3 present text-center">"Quem canta, seus males espanta!"</p>
@@ -54,3 +57,29 @@
 </div>
 
 </div>
+
+<% set_meta_tags title: "ブラジル" %>
+
+<script>
+function tweet() {
+  const dataText = '\nツラい気持ち診断をしたところ、ブラジルの情熱的なパーティーソングを処方されました！'
+  const dataUrl = 'https://mental-dj.herokuapp.com/'
+  const dataVia = 'jiffu_fu'
+  const dataHashtags = 'メンタルDJ' + '&hashtags=個人開発' + '&hashtags=クソアプリ'
+
+  window.open(
+    'https://twitter.com/intent/tweet?&text=' +
+      dataText +
+      '%0a&' +
+      '%0a&' +
+      '&url=' +
+      dataUrl +
+      '%0a&' +
+      '&via=' +
+      dataVia +
+      '&hashtags=' +
+      dataHashtags
+  )
+}
+
+</script>
