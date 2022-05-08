@@ -1,26 +1,35 @@
 <%= render 'shared/header' %>
-<div class="top-wrapper">
+<div class="usa-image">
+
+<div class="top-wrapper-2">
+  <div class="usa">
+    <h1 class="result display-1 text-center">🤖診断結果🤖</h1>
+    <br>
+    <br>
+    <p class="h2 stroke description text-center font-weight-bold">全てにNOと答えたあなた！<br>とてもツラい状態にあるようですね・・・<br></p><br>
+    <p class="h3 stroke-2 description text-center font-weight-bold">アメリカの国歌を聴いて,偉大なコトを成し遂げたジブンを空想しちゃういましょう！</p>
+  </div>
+  <div class="blank-2"></div>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="track-name col-md-10">
-        <p class="mt-lg-3">🇺🇸アメリカ国歌を歌おう🇺🇸</p>
-        <p class="mt-lg-3">🇺🇸USA!! USA!! USA!!🇺🇸<p>
+      <div class="track-name col-md-12">
         <div class="embed-responsive embed-responsive-1by1">
-        <iframe class= "iframe embed-responsive-item" style="border-radius: 2% 2% / 2% 2%;" src="https://open.spotify.com/embed/track/<%= result[0].id %>?utm_source=generator" width="99%" height="850px" frameBorder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <iframe class= "iframe embed-responsive-item" style="border-radius: 2% 2% / 2% 2%;" src="https://open.spotify.com/embed/track/<%= result[0].id %>?utm_source=generator" width="150%" height="850px" frameBorder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
       </div>
     </div>
+    <div class="blank-2"></div>
+    <br><br>
+    <p class="h6 present text-center">- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - </p>
+    <div class="bkank-2"></div>
 
-        <br>
-        <br>
-        <br>
-        
     <div class="track-name">
-      <p class="mt-lg-3">🇺🇸アメリカで人気の！パーティー！ソング！🇺🇸</p>
-      <p>👨‍🔬＜ｷｸﾄ ﾒｯﾁｬ ｹﾞﾝｷ ﾅﾙﾖ</p>
+      <p class="lead-1 description stroke-2">🇺🇸ついでに、アメリカで人気のパーティーソングをどうぞ🇺🇸</p>
+      <p class="h2 set-1 stroke-3">💃＜踊っていればそのうちいいことがあるはず</p>
+      <p class="h2 set-3 stroke-3">👨‍🔬＜キミはリンカーンの生まれ変わりさ</p>
         <div class="row justify-content-center">
           <% popular_tracks.each do |track| %>
-            
+
             <br>
             <div class="col-4 m-4 embed-responsive embed-responsive-1by1"> 
               <iframe  style="border-radius: 2% 2% / 2% 2%;" src="https://open.spotify.com/embed/track/<%= track.id %>?utm_source=generator" width="90%" height="" frameBorder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -30,5 +39,7 @@
         </div>
     </div>
 
-    </div>
   </div>
+</div>
+
+</div>

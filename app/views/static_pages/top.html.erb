@@ -1,19 +1,29 @@
 <main>
+  <div class="bg_pattern Circles">
   <div class="top-pages p-2">
-    <h1 class='top-message pb-6 mx-auto text-xl-center'>はじめまして<br>Mr.メンタルDJ博士です</h1>
+    <h1 class='top-message pb-6 mx-auto text-xl-center stroke'>はじめまして<br>Mr.メンタルDJ博士です</h1>
   </div>
 
   <div class='top_man p-2 mg-thumbnail'>
-    <%= image_tag 'abstract-doctor.png', class: 'img-fluid rounded mx-auto d-block'%>
+    <%= image_tag 'abstract-doctor.png', class: 'mx-auto d-block doctor'%>
+    
+  </>
   </div>
-
-  <div class="pb-6">
-    <h1 class='message'>あなたのツラいお気持ち、<br>音楽の力で癒してみませんか？</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="mx-auto">
+    <h1 class='message text-xl-center'>あなたのツラいお気持ち、<br>音楽の力で癒してみませんか？</h1>
+    <br>
+    <br>
   </div>
+  <p class="mx-auto text-xl-center how-to stroke-3">簡単な質問に５つお答えください。<br>あなただけの診察結果をお届けいたします。<p>
 
-  <div class="columns m-6">
-    <%= link_to homes_index_path, method: :get, class: 'column is-6 is-offset-3 custom-btn btn-1 submit-button button top-btn' do %>
-      <span><%= "診断を始める" %></span>
+  <br>
+  <div class="columns m-6 sticky-top text-xl-center start-button">
+    <%= link_to homes_index_path, method: :get, class: 'column is-6 is-offset-3 custom-btn btn-1 submit-button button top-btn nav-link' do %>
+      <span stroke-2><%= "＜＜診断を始める＞＞" %></span>
     <% end %>
   </div>
 </main>

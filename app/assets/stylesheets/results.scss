@@ -4,19 +4,166 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Hachi+Maru+Pop&family=Kaisei+Opti&family=Shippori+Mincho+B1&family=Yuji+Mai&family=Zen+Kurenaido&display=swap');
+
+.top-wrapper {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.top-wrapper-2 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.result{
+  font-family: 'Dela Gothic One', cursive;
+  color: rgb(12, 9, 9);
+}
+
+.description {
+  font-family: 'Zen Kurenaido', sans-serif;
+  text-align: center;
+}
+
+.present {
+  font-family: 'DotGothic16', sans-serif;
+  color: rgb(58, 65, 22);
+}
+
+.brazil-image {
+  background: image-url("br.png");
+  background-size: contain;
+  background-repeat: repeat-y;
+  z-index: -1000;
+}
+
+.africa-image {
+  background: image-url("za.png");
+  background-size: contain;
+  background-repeat: repeat-y;
+  z-index: -1000;
+}
+
+.india-image {
+  background: image-url("in.png");
+  background-size: contain;
+  background-repeat: repeat-y;
+  z-index: -1000;
+}
+
+.thai-image {
+  background: image-url("th.png");
+  background-size: contain;
+  background-repeat: repeat-y;
+  padding: 10px 0 10px 0;
+  z-index: -1000;
+}
+
+.nepal-image {
+  background: image-url("np.png");
+  background-repeat: true;
+  z-index: -1000;
+}
+
+.usa-image {
+  background: image-url("us.png");
+  background-size: contain;
+  background-repeat: repeat-y;
+  z-index: -1000;
+}
 
 .playlist-name {
-  align-items: center;
   width: 100vw;
   max-width: 610px;
-  margin: 0 auto;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 18px;
-  color: #e07474;
+  font-family: 'DotGothic16', sans-serif;
+  color: #984545;
+}
+
+.set0 {
+  font-family: 'Zen Kurenaido', sans-serif;
+  text-align: center;
+  
+}
+
+.set-1 {
+  font-family: 'Zen Kurenaido', sans-serif;
+  text-align: center;
+}
+
+.se-2 {
+  font-family: 'Shippori Mincho B1', serif;
+  text-align: center;
+}
+
+.set-3 {
+  font-family: 'Hachi Maru Pop', cursive;
+  text-align: center;
 }
 
 .track-name {
   font-family: 'Sawarabi Mincho', serif;
   text-align: center;
   font-size: 30px;
+}
+
+.africa {
+  text-align: center;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.brazi {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blank {
+  height: 15vw;
+}
+
+.blank-2 {
+  height: 10vw;
+}
+
+.stroke {
+  padding: 10px;
+  color: #CCC;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow:
+          3px 3px 3px #000, -3px -3px 3px #000,
+         -3px 3px 3px #000,  3px -3px 3px #000;
+  margin: 0;
+}
+
+.stroke-2 {
+  padding: 10px;
+  color: #CCC;
+  font-size: 40px;
+  text-shadow:
+          2px 2px 2px #000, -2px -2px 2px rgb(122, 134, 58),
+         -2px 2px 2px #000,  2px -2px 2px rgb(95, 102, 54);
+  margin: 0;
+}
+
+.stroke-3 {
+  padding: 10px;
+  color: #CCC;
+  font-size: 30px;
+  text-shadow:
+          2px 2px 2px #000, -2px -2px 2px rgb(178, 40, 40),
+         -2px 2px 2px #000,  2px -2px 2px rgb(164, 41, 41);
+  margin: 0;
+}
+
+.stroke-4 {
+  padding: 10px;
+  color: #CCC;
+  font-size: 20px;
+  text-shadow:
+            2px 2px 2px #000, -2px -2px 2px rgb(178, 40, 40),
+           -2px 2px 2px #000,  2px -2px 2px rgb(164, 41, 41);
+  margin: 0;
 }

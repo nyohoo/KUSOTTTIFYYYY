@@ -3,20 +3,7 @@
 @import "jTinder";
 
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-body {
-  padding-top: 20px;
-}
-
-header {
-  z-index: 100;
-}
-
-.img-fluid {
-  max-width: 100%; 
-  height: auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Hachi+Maru+Pop&family=Kaisei+Opti&family=Shippori+Mincho+B1&family=Yuji+Mai&family=Zen+Kurenaido&display=swap');
 
 .top-pages {
   width: 100vw;
@@ -27,26 +14,92 @@ header {
   color: #c73cb0;
 }
 
-.message {
+.bg_pattern {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 106vh;
+  background-color: #ffe9a7;
+  z-index: -1;
+}
+
+.main-content {
+  position: absolute;
+  top: 0px;
+  object-fit: contain;
+  z-index: -1;
+}
+
+.Circles {
+  background-image: radial-gradient(circle at center center, #ffc107, #ffe9a7), repeating-radial-gradient(circle at center center, #ffc107, #ffc107, 20px, transparent 40px, transparent 20px);
+  height: 106vh;
+  background-blend-mode: difference;
+}
+
+.start-button {
   width: 100vw;
   max-width: 610px;
   margin: 0 auto;
   font-family: 'Sawarabi Mincho', serif;
-  font-size: 25px;
-  color: #c73cb0;
+  font-size: 100px;
+  color: #8f1d7c;
 }
 
-.bg_pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
+.message {
   width: 100vw;
-  height: 100vh;
-  background-color: #5332a7;
-  opacity: 0.4;
-  z-index: -1;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  padding: 10px;
+  color: rgb(211, 202, 209);
+  font-family: 'Dela Gothic One', cursive;
+  text-shadow:
+        2px 2px 2px #000, -2px -2px 2px rgb(122, 134, 58),
+       -2px 2px 2px #000,  2px -2px 2px rgb(95, 102, 54);
+  
 }
-.Circles {
-  background-image: radial-gradient(circle at center center, #1643ca, #1b1366), repeating-radial-gradient(circle at center center, #ffa807, #ffc107, 20px, transparent 40px, transparent 20px);
-  background-blend-mode: multiply;
+
+.how-to {
+  width: 100vw;
+  max-width: 800px;
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 35px;
+  color: #290d62;
+}
+
+.stroke {
+  padding: 10px;
+  color: rgb(255, 9, 206);
+  font-family: 'Dela Gothic One', cursive;
+  text-shadow:
+          2px 2px 2px #000, -2px -2px 2px rgb(122, 134, 58),
+         -2px 2px 2px #000,  2px -2px 2px rgb(95, 102, 54);
+  margin: 0;
+}
+
+.stroke-2 {
+  padding: 10px;
+  color: rgb(228, 228, 228);
+  font-family: 'Dela Gothic One', cursive;
+  text-shadow:
+          2px 2px 2px #000, -2px -2px 2px rgb(122, 134, 58),
+         -2px 2px 2px #000,  2px -2px 2px rgb(95, 102, 54);
+  margin: 0;
+}
+
+.stroke-3 {
+  padding: 10px;
+  color: rgb(211, 202, 209);
+  font-family: 'Dela Gothic One', cursive;
+  text-shadow:
+          2px 2px 2px #000, -2px -2px 2px rgb(122, 134, 58),
+         -2px 2px 2px #000,  2px -2px 2px rgb(95, 102, 54);
+  margin: 0;
+}
+
+.nav-link {
+  font-size: 3rem;
+  color: #eef1f4;
+  background-color: rgb(6, 21, 184);
+  border-color: #dee2e6 #dee2e6 #fff;
 }

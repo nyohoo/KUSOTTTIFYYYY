@@ -14,26 +14,26 @@ class ResultsController < ApplicationController
       @popular_tracks = america_popular_songs(search, country)
     elsif @result.count == 1
       country = "NP"
-      search = "पार्टी"
-      playlist = "nepal party"
+      search = "नृत्य"
+      playlist = "नेपाल"
       @result_nepal = search_playlist(playlist)
       @popular_tracks = search_popular_songs(search, country)
     elsif @result.count == 2
       country = "TH"
-      search = "แดนซ์คลับ"
-      playlist = "thailand party"
+      search = "เต้นรำ"
+      playlist = "งานสังสรรค์"
       @result_thailand = search_playlist(playlist)
       @popular_tracks = search_popular_songs(search, country)
     elsif @result.count == 3
       country = "ZA"
-      search = "dans"
-      playlist = "africa party"
+      search = "afro pop"
+      playlist = "partytjie"
       @result_africa = search_playlist(playlist)
       @popular_tracks = search_popular_songs(search, country)
     elsif @result.count == 4
       country = "IN"
-      search = "bobmay dance"
-      playlist = "bobmay party"
+      search = "करी"
+      playlist = "नृत्य"
       @result_india = search_playlist(playlist)
       @popular_tracks = search_popular_songs(search, country)
     else
@@ -57,10 +57,10 @@ class ResultsController < ApplicationController
   end
 
   def search_popular_songs(search, country)
-    popular_tracks = RSpotify::Track.search(search,  market: country).first(100) 
+    popular_tracks = RSpotify::Track.search(search,  market: country).first(18) 
     popular_tracks.shuffle!
   end
-
+2
   def america_popular_songs(search, country)
     tracks = RSpotify::Track.search(search,  market: country).first(50) 
     popular_tracks = tracks.select do |track|
