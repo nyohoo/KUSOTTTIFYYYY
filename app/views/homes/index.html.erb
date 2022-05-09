@@ -1,15 +1,19 @@
 <div class="main-content">
 </div>
-
-<div id="tinderslide" class="container-fluid">
+<br>
+<h1 class="card">👈 　NO　🤔　YES 👉</h1>
+<br>
+<div id="tinderslide" class="container-fluid flex">
+  
   <ul>
     <% @diagnoses.each do |diagnose| %>
+    
       <li data-diagnoses="<%= diagnose.text %>">
         <div class="diagnoseText"><%= diagnose.text %></div>
-        <%= image_tag diagnose.image %>
+        <%= image_tag diagnose.image, class: "img-fluid diagnose-image" %>
         <div class="like"></div>
         <div class="dislike"></div>
-        <h1 class="card justify-content-center">👈 　NO　🤔　YES 👉</h1>
+        
       </li>
     <% end %>
   </ul>

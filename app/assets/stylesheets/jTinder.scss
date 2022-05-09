@@ -10,27 +10,28 @@ html, body {
   height: 300px;
   padding: 5%;
 }
+.card {
+  font-family: 'Dela Gothic One', cursive;
+  color: #000;
+  z-index: 100;
+  text-align: center;
+  position: relative;
+}
 
 #tinderslide {
   position: relative;
   background: #fff;
-  width: 150vw;
-  height: 75vh;
-  max-width: 900px;
+  width: 100vw;
+  height: 60vh;
+  max-width: 800px;
   margin: 0 auto;
-.card {
-    font-family: 'Press Start 2P', cursive;
-    top: 400px;
-    color: #000;
-    z-index: 100;
-    background-color: #fff;
-    text-shadow: 0 2px 4px rgba(0,0,0,.5);
-  }
+  
   ul {
     margin: 0;
     position: relative;
     display: block;
     height: 100%;
+
     & > li {
       display: block;
       width: 100%;
@@ -67,8 +68,10 @@ html, body {
       }
 
       img {
+        max-width: 100%; 
+        height: auto;
         position: absolute;
-        left: 50%;
+        
         transform: translateX(-50%);
       }
     }
