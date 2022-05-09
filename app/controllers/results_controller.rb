@@ -10,7 +10,6 @@ class ResultsController < ApplicationController
     if @result.count == 0
       country = "US"
       search = "dance"
-      @twitter = "ツラい診断の結果、アメリカの国歌を処方されました！"
       @result_usa = RSpotify::Track.search("The Star Spangled Banner (National Anthem of the USA) [Band and Chorus Version]").first(1)
       @popular_tracks = america_popular_songs(search, country)
     elsif @result.count == 1
