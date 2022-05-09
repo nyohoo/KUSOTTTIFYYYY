@@ -1,7 +1,7 @@
 <div class="main-content">
 </div>
 
-<div id="tinderslide">
+<div id="tinderslide" class="container-fluid">
   <ul>
     <% @diagnoses.each do |diagnose| %>
       <li data-diagnoses="<%= diagnose.text %>">
@@ -9,7 +9,7 @@
         <%= image_tag diagnose.image %>
         <div class="like"></div>
         <div class="dislike"></div>
-        <h1 class="card text-center">👈 　NO　🤔 YES 👉</h1>
+        <h1 class="card justify-content-center">👈 　NO　🤔　YES 👉</h1>
       </li>
     <% end %>
   </ul>
